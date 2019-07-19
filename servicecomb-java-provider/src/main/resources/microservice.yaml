@@ -4,6 +4,8 @@ APPLICATION_ID: myfirst-servicecomb
 service_description:
   name: calculate-service
   version: 0.0.1
+  #接口修改可以不用修改版本号
+  environment: development
 
 servicecomb:
   service:
