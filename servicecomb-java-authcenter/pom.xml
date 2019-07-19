@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.spean</groupId>
+		<artifactId>servicecomb-java</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>servicecomb-java-authcenter</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.servicecomb</groupId>
+			<artifactId>spring-boot-starter-provider</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.spean</groupId>
+			<artifactId>servicecomb-java-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.servicecomb</groupId>
+			<artifactId>handler-tracing-zipkin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.servicecomb</groupId>
+			<artifactId>tracing-zipkin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.0</version>
+		</dependency>
+	</dependencies>
+
+</project>
