@@ -24,7 +24,7 @@ import com.spean.servicecomb.auth.AuthenticationService;
  */
 @RestSchema(schemaId = "authenticationRestEndpoint")
 @Controller
-@RequestMapping("/rest")
+@RequestMapping("/auth")
 public class AuthenticationController {
 
 	private static final Logger logger = LoggerFactory.getLogger(AuthenticationController.class);

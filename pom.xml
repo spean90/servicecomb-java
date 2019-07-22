@@ -27,6 +27,8 @@
 	<module>servicecomb-java-provider</module>
 	<module>servicecomb-java-consumer</module>
 	<module>servicecomb-java-authcenter</module>
+	<module>servicecomb-java-edge</module>
+	<module>servicecomb-java-gateway</module>
 </modules>
  <build>
     <pluginManagement>
