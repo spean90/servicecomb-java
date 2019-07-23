@@ -10,7 +10,7 @@ service_description:
 servicecomb:
   service:
     registry:
-      address: http://52.82.21.37:30100
+      address: http://52.82.112.24:30100
 
   rest:
     address: 127.0.0.1:9093
@@ -44,4 +44,4 @@ servicecomb:
           limit: 1
   tracing:
     collector: 
-        address: http://52.82.21.37:9411
+        address: http://52.82.112.24:9411
