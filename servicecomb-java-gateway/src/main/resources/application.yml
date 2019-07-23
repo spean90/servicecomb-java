@@ -3,3 +3,4 @@ server:
 zuul: 
   routes: #路由策略
     calculate-web: /comsumer/** #路由规则
+    authcenter: /auth/**

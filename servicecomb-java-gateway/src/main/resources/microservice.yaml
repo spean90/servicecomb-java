@@ -14,7 +14,28 @@ servicecomb:
 
   rest:
     address: 127.0.0.1:9099
+  handler:
+    chain:
+      Consumer:
+        default: loadbalance,bizkeeper-consumer,tracing-consumer
+  isolation:
+    Consumer:
+      timeout:
+        enabled: true
+      timeoutInMilliseconds: 3000
+  circuitBreaker:
+    Consumer:
+      enabled: true
+      sleepWindowInMilliseconds: 15000
+      requestVolumeThreshold: 3
+  fallback:
+    Consumer:
+      enabled: true
+  fallbackpolicy:
+    Consumer:
+      policy: throwexception
   tracing:
     collector: 
         address: http://52.82.21.37:9411
+      
       

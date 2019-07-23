@@ -42,7 +42,7 @@ public class AuthenticationController {
 		this.authorizationHeaderGenerator = authorizationHeaderGenerator;
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST, produces=MediaType.TEXT_PLAIN_VALUE)
+	@RequestMapping(value = "/login", method = RequestMethod.GET, produces=MediaType.TEXT_PLAIN_VALUE)
 	public ResponseEntity<String> login(@RequestParam(USERNAME) String username,
 			@RequestParam(PASSWORD) String password) {
 

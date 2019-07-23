@@ -12,29 +12,36 @@ servicecomb:
     registry:
       address: http://52.82.21.37:30100
 
-  rest:
-    address: 127.0.0.1:9094
+#  rest:
+#    address: 127.0.0.1:9094
+  highway:
+    address: 127.0.0.1:7074
   handler:
     chain:
-      Consumer:
-        default: loadbalance,bizkeeper-consumer,tracing-consumer
+      Provider:
+        default: bizkeeper-provider,qps-flowcontrol-provider,tracing-provider
   isolation:
-    Consumer:
+    Provider:
       timeout:
         enabled: true
-      timeoutInMilliseconds: 3000
+      timeoutInMilliseconds: 30000
   circuitBreaker:
-    Consumer:
+    Provider:
       enabled: true
       sleepWindowInMilliseconds: 15000
-      requestVolumeThreshold: 3
+      requestVolumeThreshold: 20
   fallback:
-    Consumer:
+    Provider:
       enabled: true
   fallbackpolicy:
-    Consumer:
+    Provider:
       policy: throwexception
+  #限流，每秒一次
+  flowcontrol:
+    Provider:
+      qps:
+        global:
+          limit: 1
   tracing:
     collector: 
         address: http://52.82.21.37:9411
-      
